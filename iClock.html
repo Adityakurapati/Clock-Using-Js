@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<style>
+*{
+
+  font-family:courier;
+
+  color:#434242;
+
+}
+
+@media all and (280px <= device-width <= 395px) {
+
+nav{
+
+  height:40vh;
+
+  display:flex;
+
+  justify-content: center;
+
+  font-size:70pc;
+
+}
+
+}
+
+html, body {
+
+  height: 100%;
+
+  width: 100%;
+
+  margin:0; 
+
+  background:#e97501;
+
+}
+
+nav{
+
+  height:10vh;
+
+  width:device-width;
+
+  background:#7430fa;
+
+  display:flex;
+
+  justify-content: right;
+
+  flex-direction:row;
+
+}
+
+#clock{
+
+  font-family:courier;
+
+   background-image:url("https://lh3.googleusercontent.com/ALODh-SUyerLQATT2j-H1sm10c1A4s0vGsYV2QIwkcJIxLIum9PJp6Ma1eeXUQE_qf1WO_iWvztlmJ3S3v26_fi9ljnQsQNRdMRZtrN25rCKHBw6mEj3ydaeibWUvksI28jEynrWH4MZeKTjd1WOKaX8Nw_PVaczoe_c7Z82-Ka2UNIgelcAjtdAM8CKTogbEBscgMDrMZY64PypWr6g8nDy5d9HDrwBzyobe3b2Ka8bf-oORX9leeIBnTkMk7uhxAXQdvGA0_QD1iwyaBmLL7ds0hnYtJI9y1swaUKusxlcBEWpbwosdScOJzDJAV2VCw8JXjCA4cWknYKRxCQnhUpMui-EVP0kw5iolvxl2v_bynd9ArUXBke8F_naPQLbUUQ6moC-W5D6VAc3z0hd-UUoFsWrU5N_HpN81jKtetK4DpFujdUb-9KuD_hN7XxxH_MCxBUS-goRf94McSNKWhEMC-NMsZN-BRpCT9UW4GUp0LoQTzOar_-DXDvSfYNECne53JveB-bKVtgVQ8nkAHdUOtrVJcmAWHrYAS8eyCoE1iOdU2KPuRgX5Vofq_gzPHN8biO8lBnhTXO8UoesIQl_qdOgvuUmyZKg-LiyFdF3KJtqX5fcNNac60LFogn9J63vTYhg7kM4OgAG4ipwsamVQvx54lzOfBidYnII4PbFuZ1K-T_hGfB1WlDQ5RH5xV06c_vb9cLV-jT7LpShNkciH_eUxdWYAbp9Q_gAYeYCQLo8HlfjBhdFr22nw2Y=s250-k-rw-no");
+
+  height:17%;
+
+  background-repeat: no-repeat;
+
+  padding:50px;
+
+  margin-top:20%;
+
+  margin-bottom:20%;
+
+  margin-left:9%;
+
+  margin-right:4%;
+
+  border-radius:10vh;
+
+  background-size: 100% 100%;
+
+  background-position: fixed;
+
+  transition:box-shadow 3s,border 3s;/*width 
+
+  0.7s,height 0.7s;*/
+
+/*   box-shadow: 4px 4px 20px 12px grey; */
+
+  transition-delay:0.3s;
+
+  animation-name:slides;
+
+  animation-duration:3s;
+
+  animation-iteration-count: infinite;
+
+}
+
+@keyframes slides{
+
+  0%{
+
+    top:0px;
+
+  }
+
+  100%{
+
+    top:500px;
+
+  }
+
+}
+
+#clock:hover{
+
+  box-shadow: 6px 6px 100px 50px #7827a3;
+
+  border:2px solid #7827a3;
+
+}
+
+footer{
+
+  text-align:center;
+
+  padding:50px;
+
+  background-color:#c7c7c7;
+
+  color:white;
+
+}
+
+#hour1,#min1,#sec1,#am1{
+
+  font-size: 9vw;
+
+  margin-top:40px;
+
+  padding-bottom:40px;
+
+}
+
+#day1,#month1,#date1{
+
+  padding-top:20px;
+
+  font-size: 4vw;
+
+  font-family:'courier';
+
+  color:grey;
+
+}
+
+#middleDiv{
+
+  height:100%;
+
+  background:#e67203;
+
+}
+
+#menu1{
+
+  height:inherit;
+
+  transition:width 1s,height 1s;
+
+}
+
+#menu1:hover{
+
+  width:20px;
+
+  height:20px;
+
+  box-shadow: 2px 2px 40px 8px #0d0d30;
+
+  
+
+}
+
+button{
+
+  height: inherit;
+
+  width: inherit;
+
+  background-color: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  border-radius: 5px;
+
+  transition: 0.1s;
+
+}
+
+button:hover{
+
+  transform: scale(1.05);
+
+}
+
+
+</style>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+  <section>
+
+    <nav id="nav11">
+
+      <ul style="margin-right:35vw;">
+
+        <h1 style="font-size: 3rem;;">Clock</h1>
+
+<!--         <h1 style="font-size: 3rem;padding-top:30rem;">Clock</h1> -->
+
+      </ul>
+
+      <button>
+
+        <image id="menu1"
+
+          src="https://cdn.vectorstock.com/i/1000x1000/69/81/burger-menu-icon-for-website-template-design-vector-30006981.webp"
+
+          style="justify-content:right;background-size:100% 100%;width:inherit;height:inherit;">
+
+      </button>
+
+    </nav>
+
+    <div id='middleDiv'>
+
+      <div id="clock">
+
+        <span id="hour1"></span>
+
+        <span id="min1"></span>
+
+        <span id="sec1"></span><br>
+
+        <span id="am1"></span><br>
+
+        <span id="day1"></span>
+
+        <span id="date1"></span>
+
+        <span id="month1"></span><br>
+
+        <span id="year1"></span>
+
+      </div>
+
+      <span id= "greet"></span>
+
+    </div>
+
+    <div id="photo"></div>
+
+    <script src="script.js"></script>
+
+    <footer>
+
+      <p>Author : Aditya Kurapati <br>
+
+        <a href="mailto:kurapatiaditya14@gmail.com">Mail Me</a>
+
+      </p>
+
+      <span id="foot"></span>
+
+    </footer>
+
+    <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+
+</body><script>
+
+const updateTime = () => {
+
+  let myDate = new Date();
+
+  let day = myDate.getDay();
+
+  let date = myDate.getDate();
+
+  let month = myDate.getMonth();
+
+  let year = myDate.getFullYear();
+
+  let hours = myDate.getHours()
+
+  let secs = myDate.getSeconds();
+
+  let minutes = myDate.getMinutes()
+
+  hours = hours % 12;
+
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+
+  var ampm = hours >= 12 ? 'pm' : 'am';
+
+  hours = hours % 12;
+
+  document.wri
+
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+
+  var strTime = hours + ' : ' + minutes + ' : ' + secs + '  ' + ampm;
+
+  hours = strTime;
+
+  /*
+
+  let say = ()=>{
+
+    if((hours>6&&hours<= 12)&&(hours<=12&& !minutes>0))
+
+       {
+
+          return "Moring";
+
+       }
+
+    else if((hours>12&&hours<= 5)&&(hours<=5&& !minutes>0))
+
+{
+
+return "Afternoon"
+
+}
+
+    else if((hours>5 && hours<= 8) &&(hours<=&& !minutes>0))
+
+{
+
+return "Evening"
+
+}
+
+else if((hours>8 && hours<= 12) &&(hours<=12 && !minutes>0))
+
+{
+
+return "Night"
+
+}
+
+  }*/
+
+  //  let hours = myDate.getHours() < 10 ? "0" + myDate.getHours() : getHours();
+
+  // let minutes = myDate.getMinutes() < 10 ? "0" + myDate.getMinutes() : myDate.getMinutes();
+
+  var dayStr = '';
+
+  switch (day) {
+
+    case 1:
+
+      dayStr = "Monday";
+
+      break;
+
+    case 2:
+
+      dayStr = "Tuesday";
+
+      break;
+
+    case 3:
+
+      dayStr = "Wednesday";
+
+      break;
+
+    case 4:
+
+      dayStr = "Thursday";
+
+      break;
+
+    case 5:
+
+      dayStr = "Friday";
+
+      break;
+
+    case 6:
+
+      dayStr = "Saturday";
+
+      break;
+
+    case 7:
+
+      dayStr = "Sunday";
+
+      break;
+
+  }
+
+  hour1.innerHTML = `${strTime} :`
+
+  // min1.innerHTML = `${minutes} :`
+
+  // sec1.innerHTML = `${secs}`
+
+  // am1.innerHTML = `${secs}`
+
+  day1.innerHTML = `${dayStr}`;
+
+  date1.innerHTML = `${date}`;
+
+  month1.innerHTML = `${month}`;
+
+  year1.innerHTML = `${year}`;
+
+  //greet.innerHTML= `${say}`;
+
+}
+
+setInterval(updateTime, 500)
+
+/*
+
+const getImage = () => {
+
+  fetch("https://api.unsplash.com/users/lukeskywalker/photos").then(responce => responce.json()).then(json => {
+
+    photo.innerHTML = `<image src='${json.message}'>`
+
+  })
+
+  // con = await fetch("https://api.unsplash.com/users/lukeskywalker/photos")
+
+  // let a = await con.json();
+
+  // return a;
+
+}*/
+</script>
+
+</html>
